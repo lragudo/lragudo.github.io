@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 body{
-    background: rgb(78, 177, 207);
-    color: white;
+    background: #333333;
+    color: #ffd8d8;
+    font-family: Ubuntu, Arial, Helvetica, sans-serif;
 }
