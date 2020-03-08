@@ -50,22 +50,22 @@
 		<div class= "contact">
 			<h1>Contact Me</h1>
 			<div class="bio-img"><img src="images/mail.png" alt="doodle of flowers coming out of an envelope"></div>
-			<form id="contact-form" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/lillianr.design@gmail.com" method="post">
-
-    <fieldset id="inputs">
-
-      <input type="text" name="name" id="full-name" placeholder="Name" required="">
-
-      <input type="email" name="_replyto" id="email-address" placeholder="Email Address" required="">
-
-      <textarea rows="8" name="message" id="message" placeholder="Tell me something!" required=""></textarea>
-
-      <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-
-    </fieldset>
-    <input type="submit" value="Submit">
-
-  </form>
+            <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <p>
+                <label>Your Name: <input type="text" name="name" required /> 
+              </label>   
+              </p>
+              <p>
+                <label>Your Email: <input type="email" name="email" required /></label>
+              </p>
+              <p>
+                <label>Message: <textarea name="message" required> </textarea></label>
+              </p>  
+              <div data-netlify-recaptcha="true"></div>
+              <p>
+                  <button type="submit">Send</button>
+              </p>
+              </form>
 </div>
 	</main>
 	

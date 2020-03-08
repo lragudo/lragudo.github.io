@@ -186,38 +186,37 @@ For Contact
 }
 
 form{
-	margin: 0 1rem;
-	padding: .75rem;
-	border-left: solid .25rem #B84D4D;
-  width: 90%;
-  max-width: 800px;
+    margin: 0 1rem;
+    padding: .75rem;
+    border-left: solid .25rem var(--SecondaryPink);
+    width: 90%;
+    max-width: 800px;
 }
 
-fieldset label,
-fieldset input, 
-fieldset textarea {
+form label{
+    color: var(--PrimaryPink);
+}
+form input, 
+form textarea {
   display: block;
-  padding: .5rem, .25rem;
-  margin: 1rem 0;
-  background: #6B6969;
-  color: #FFD8D8;
+  background: var(--PrimaryGray);
+  color: var(--PrimaryPink);
   border: none;
   border-radius: 4px;
   width: 100%;
   resize: none;
+  padding: .25rem;
 }
-fieldset label,
-fieldset input{
+form label,
+form input{
 	max-width: 270px;
 }
 
-fieldset{
-  border: none;
-	padding: 0;
-	margin:0;
+form textarea{
+    height: 10rem;
 }
 
-input[type="submit"] {
+button {
   cursor: pointer;
   border: none;
   border-radius: 5%;
@@ -228,7 +227,7 @@ input[type="submit"] {
   font-size: 1rem;
 }
 
-
+/* focus, hover, and active on contact form */
 
 textarea:focus, input[type="email"]:focus, input[type="text"]:focus{
   border-bottom: solid .25rem #FFD8D8;
@@ -243,9 +242,9 @@ textarea:active, input[type="email"]:active, input[type="text"]:active{
   border-bottom: solid .25rem #FFD8D8;
 } 
 
-input[type="submit"]:focus,
-input[type="submit"]:hover,
-input[type="submit"]:active
+button[type="submit"]:focus,
+button[type="submit"]:hover,
+button[type="submit"]:active
 {
 	background: #B84D4D;
 	color: #FFD8D8;
