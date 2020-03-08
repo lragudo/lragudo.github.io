@@ -1,6 +1,8 @@
 :root{
-    --PrimaryPink: #FFD8D8;
-    --SecondaryPink: #B84D4D;
+	--PrimaryPink: #FFD8D8;
+	--PrimaryPinkOp: rgba(255, 216, 216, 0.685);
+	--SecondaryPink: #B84D4D;
+	--SecondPinkOp: rgba(184, 77, 77, 0.5);
     --PrimaryGray: #636262;
     --Light: white;
 }
@@ -251,8 +253,6 @@ button[type="submit"]:active
 	color: #FFD8D8;
 }
 
-
-
 ::placeholder{
   color: #E0E0E0;
 }
@@ -261,38 +261,38 @@ button[type="submit"]:active
 /**********
 Thumbnails
 ***********/
-
-/* layout of h2 and port items */
-#poetry, #photo, #doodles, #poster, #stickers{
+section{
 	display: grid;
 	grid-template-columns: 1fr 3fr;
-	margin: 2rem 0;
 }
-
-.gallery {
-	display: flex;
-	justify-content: flex-start;
-	flex-wrap: wrap;
+#gallery{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	border-left: solid #B84D4D .25rem;
 	margin-left: 2rem
 }
 
-/* layout of items of each individual portfolio item */
-.gallery figure{
-	background: rgba(255, 216, 216);
+section a{
+	background:var(--PrimaryPink);
+	padding: .5rem;
+	margin: .75rem;
 	border-radius: 5%;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
 }
 
-.gallery figure img{
+/* Lightbox Styling */
+.lg-img-wrap { 
+	background-color: var(--SecondaryPink);
+  }
+.lg-toolbar.group, #lg-counter .lg-toolbar .lg-icon, .lg .lg-actions .lg-next, .lg .lg-actions .lg-prev{
+	background-color: var(--PrimaryPinkOp);
+	color: var(--PrimaryGray);
+}
+
+/* layout of items of each individual portfolio item */
+
+section img{
 	max-width: 200px;
 	padding: 0;
-}
-.gallery figure a {
-	padding: 0;
-	margin: 0;
 }
 
 h3 {
@@ -305,86 +305,6 @@ figcaption {
 	color: #b84d4d;
 }
 
-.gallery figure:hover, 
-.gallery figure:focus, 
-.gallery figure:active{
-	background: #b84d4d;
-} 
-
-.gallery figure:hover h3, 
-.gallery figure:focus h3, 
-.gallery figure:active h3, 
-.gallery figure:hover figcaption, 
-.gallery figure:focus figcaption, 
-.gallery figure:active figcaption{
-	color: #FFD8D8;
-} 
-
-
-/**********
-Overlay
-***********/
-/* stop background from scrolling DOESNT WORK*/
-/* .background-content{
-	 height: 100%;
-   overflow: hidden;
-} */
-
-.overlay a {
-	display: flex;
-	justify-content: center;
-	padding: 0;
-}
-.overlay figure{
-	overflow-y: auto;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	
-}
-.overlay a img {
-	margin: 0 auto;
-	height: 80vh;
-}
-.overlay figcaption,
-.overlay h3 {
-	color: #FFD8D8;
-	padding: 0.25rem;
-	margin: 0;
-}
-/* Before (hidding the overlay)*/
-.overlay {
-	display: none;
-	opacity: 0;
-}
-
-/* After (displaying the overlay)*/
-.overlay:target {
-	background: rgba(123, 25, 25, 0.75);
-	height: 100%;
-	width: 100%;
-	opacity: 1;
-
-	/* stretch overlay to fill entire screen  */
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1;
-
-	/* vertical and center align with Flexbox */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-
-	/*  animation  */
-	transition: opacity 0.5s;
-}
 
 /**********
 Media Queries
