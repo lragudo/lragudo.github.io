@@ -1,1 +1,3 @@
-"ok ok ok"
+lightGallery(document.getElementById('gallery'), {
+    download: false
+  });

@@ -269,7 +269,7 @@ Thumbnails
 	margin: 2rem 0;
 }
 
-.port-items {
+.gallery {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
@@ -278,7 +278,7 @@ Thumbnails
 }
 
 /* layout of items of each individual portfolio item */
-.port-items figure{
+.gallery figure{
 	background: rgba(255, 216, 216);
 	border-radius: 5%;
 	display: flex;
@@ -286,11 +286,11 @@ Thumbnails
 	flex-direction: column;
 }
 
-.port-items figure img{
+.gallery figure img{
 	max-width: 200px;
 	padding: 0;
 }
-.port-items figure a {
+.gallery figure a {
 	padding: 0;
 	margin: 0;
 }
@@ -305,18 +305,18 @@ figcaption {
 	color: #b84d4d;
 }
 
-.port-items figure:hover, 
-.port-items figure:focus, 
-.port-items figure:active{
+.gallery figure:hover, 
+.gallery figure:focus, 
+.gallery figure:active{
 	background: #b84d4d;
 } 
 
-.port-items figure:hover h3, 
-.port-items figure:focus h3, 
-.port-items figure:active h3, 
-.port-items figure:hover figcaption, 
-.port-items figure:focus figcaption, 
-.port-items figure:active figcaption{
+.gallery figure:hover h3, 
+.gallery figure:focus h3, 
+.gallery figure:active h3, 
+.gallery figure:hover figcaption, 
+.gallery figure:focus figcaption, 
+.gallery figure:active figcaption{
 	color: #FFD8D8;
 } 
 
