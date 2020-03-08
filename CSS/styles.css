@@ -2,6 +2,7 @@
     --PrimaryPink: #FFD8D8;
     --SecondaryPink: #B84D4D;
     --PrimaryGray: #636262;
+    --Light: white;
 }
 
 body {
@@ -200,7 +201,7 @@ form input,
 form textarea {
   display: block;
   background: var(--PrimaryGray);
-  color: var(--PrimaryPink);
+  color: var(--Light);
   border: none;
   border-radius: 4px;
   width: 100%;
