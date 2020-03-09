@@ -32,6 +32,16 @@ h1 {
 p{
 	line-height: 1.5;
 }
+/**********
+404
+***********/
+.notFound section{
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 3rem auto;
+}
 
 /**********
 Nav Bar
