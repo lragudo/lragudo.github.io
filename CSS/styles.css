@@ -3,7 +3,9 @@
 	--PrimaryPinkOp: rgba(255, 216, 216, 0.685);
 	--SecondaryPink: #B84D4D;
 	--SecondPinkOp: rgba(184, 77, 77, 0.5);
-    --PrimaryGray: #636262;
+	--PrimaryGray: #636262;
+	--SecondaryGray: #333333;
+	--LightGray: #E0E0E0;
     --Light: white;
 }
 
@@ -271,6 +273,8 @@ button[type="submit"]:active
 /**********
 Thumbnails
 ***********/
+
+/* grid layout */
 section{
 	display: grid;
 	grid-template-columns: 1fr 3fr;
@@ -282,38 +286,50 @@ section{
 	margin-left: 2rem
 }
 
-section a{
-	background:var(--PrimaryPink);
-	padding: .5rem;
-	margin: .75rem;
-	border-radius: 5%;
-}
-
-/* Lightbox Styling */
-.lg-img-wrap { 
-	background-color: var(--SecondaryPink);
-  }
-.lg-toolbar.group, #lg-counter .lg-toolbar .lg-icon, .lg .lg-actions .lg-next, .lg .lg-actions .lg-prev{
-	background-color: var(--PrimaryPinkOp);
-	color: var(--PrimaryGray);
-}
-
 /* layout of items of each individual portfolio item */
 
 section img{
 	max-width: 200px;
 	padding: 0;
+	border-radius: 5%;
+}
+
+section a{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
 }
 
 h3 {
-	color: #b84d4d;
+	color: var(--PrimaryPink);
 	margin: .5rem;
 }
 
 figcaption {
 	padding: 0.25rem 0;
 	color: #b84d4d;
+	display: none;
 }
+
+/**********
+Lightbox Styling
+***********/
+
+.lg-img-wrap { 
+	background-color: var(--SecondaryGray);
+  }
+.lg-toolbar.group, .lg #lg-counter, .lg .lg-actions .lg-next, .lg .lg-actions .lg-prev, .lg .lg-toolbar .lg-icon{
+	background-color: var(--SecondaryPink);
+	color: var(--PrimaryPink);
+}
+
+
+.lg-backdrop.in{
+	background-color: #333333;
+}
+
+
 
 
 /**********
