@@ -98,61 +98,41 @@ a {
 /**********
 Sub nav
 ***********/
-.sub{
+.filters{
 	background: transparent;
+	margin-top: 1.5rem;
 	justify-content: center;
 	align-items: center;
-	margin-top: 1.5rem;
 }
 
-.sub a:link{
+.filters button{
+	color: #FFD8D8;
+	text-decoration: none;
+	padding: 1rem;
+	margin: 0 .25rem;
+	font-size: 1.25rem;
+ 	border: none;
+ 	border-bottom: 0.25rem solid #FFD8D8;
+	background: transparent;
+	border-radius: 0;
+}
+
+.filters button:link{
 	border-bottom: 0.25rem solid #FFD8D8;
 }
 
-.sub a:focus {
+.filters button:focus {
 	border-bottom: 0.25rem solid #B84D4D;
 }
 
-.sub a:hover {
+.filters button:hover {
 	border-bottom: 0.25rem solid #B84D4D;
 }
 
-.sub a:active {
+.filters button:active {
 	background: #B84D4D;
 }
 
-/**********
-button to the top
-***********/
-.button{
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	background: #B84D4D;
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	position: fixed;
-	bottom: 1.75rem;
-	right: 1.75rem;
-}
-
-.button h1{
-	color: #FFD8D8
-}
-
-.button:hover, 
-.button:focus, 
-.button:active{
-	background: #FFD8D8;
-	cursor: pointer;
-} 
-
-.button:hover h1, 
-.button:focus h1, 
-.button:active h1{
-	color: #b84d4d;
-}
 /**********
 For Bio
 ***********/
