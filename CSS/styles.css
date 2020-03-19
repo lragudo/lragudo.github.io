@@ -110,7 +110,7 @@ Sub nav
 	text-decoration: none;
 	padding: 1rem;
 	margin: 0 .25rem;
-	font-size: 1.25rem;
+	font-size: 1rem;
  	border: none;
  	border-bottom: 0.25rem solid #FFD8D8;
 	background: transparent;
@@ -132,6 +132,24 @@ Sub nav
 .filters button:active {
 	background: #B84D4D;
 }
+
+/**********
+portfolio filtered content
+***********/
+.content {
+	background: lightgray;
+	height: 100px;
+	width: 100px;
+	margin: 1rem;
+	border-radius: 5%;
+  }
+  
+  .filter-container{
+	  margin: 1rem 5rem;
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-items: end;
+  }
 
 /**********
 For Bio
