@@ -349,6 +349,27 @@ Section on subpages
 	margin-bottom: .5rem;
 	text-align: center;
 }
+
+#catherder .intro p{
+	text-align: left;
+}
+
+/* for cat herder sub page */
+.cat{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	margin: 0 auto;
+}
+.cat img{
+	width: 250px;
+}
+.cat h4{
+	margin-top: .5rem;
+	color: #FFD8D8;
+}
 /**********
 Thumbnails
 ***********/
