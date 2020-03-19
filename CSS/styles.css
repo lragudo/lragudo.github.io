@@ -80,19 +80,27 @@ a {
 }
 .nav a:link{
 	border-bottom: 0.25rem solid #FFD8D8;
+	border-radius: 5%;
 }
 
 .nav a:focus{
+	color: #FFD8D8;
 	border-bottom: 0.25rem solid #B84D4D;
+	border-radius: 5%;
 }
 
 .nav a:hover{
+	color: #FFD8D8;
 	border-bottom: 0.25rem solid #B84D4D;
+	border-radius: 5%;
 }
 
 .nav a:active{
+	color: #FFD8D8;
 	background: #B84D4D;
+	border-radius: 5%;
 }
+
 
 
 /**********
@@ -112,44 +120,96 @@ Sub nav
 	margin: 0 .25rem;
 	font-size: 1rem;
  	border: none;
- 	border-bottom: 0.25rem solid #FFD8D8;
+	border-bottom: 0.25rem solid #FFD8D8;
 	background: transparent;
-	border-radius: 0;
 }
 
 .filters button:link{
 	border-bottom: 0.25rem solid #FFD8D8;
+	border-radius: 5%;
 }
 
 .filters button:focus {
 	border-bottom: 0.25rem solid #B84D4D;
+	border-radius: 5%;
 }
 
 .filters button:hover {
 	border-bottom: 0.25rem solid #B84D4D;
+	border-radius: 5%;
 }
 
 .filters button:active {
 	background: #B84D4D;
+	border-radius: 5%;
+}
+/**********
+Links for whole website
+***********/
+
+a:link{
+	color: #FFD8D8;
+}
+
+a:focus{
+	color:#B84D4D;
+}
+
+a:hover{
+color: #B84D4D;
+}
+
+a:active{
+	color: #B84D4D;
 }
 
 /**********
 portfolio filtered content
 ***********/
 .content {
-	background: lightgray;
-	height: 100px;
-	width: 100px;
+	width: 250px;
 	margin: 1rem;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap-reverse;
+	justify-content: center;
+  }
+
+  .content h3{
+	  font-size: .75rem;
+  }
+
+  .content img{
 	border-radius: 5%;
+	width: 100%;
   }
-  
   .filter-container{
-	  margin: 1rem 5rem;
-	  display: flex;
-	  flex-wrap: wrap;
-	  justify-items: end;
+	  margin: 1rem 3rem;
   }
+
+  /**********
+portfolio content links
+***********/
+
+.content a{
+	margin: 0;
+	padding: 0;
+}
+
+.content a:focus {
+	border-bottom: 0.25rem solid #FFD8D8;
+	border-radius: 5%;
+}
+
+.content a:hover {
+	border-bottom: 0.25rem solid #FFD8D8;
+	border-radius: 5%;
+}
+
+.content a:active {
+	border-bottom: #FFD8D8;
+	border-radius: 5%;
+}
 
 /**********
 For Bio
@@ -266,22 +326,41 @@ button[type="submit"]:active
 ::placeholder{
   color: #E0E0E0;
 }
-
-
+/**********
+Section on subpages
+***********/
+.intro{
+	margin-top: 3rem;
+	display: flex;
+	justify-content: center;
+}
+.intro div{
+	max-width: 40rem;
+}
+.intro a{
+	display: inline;
+	padding: 0;
+	font-size: 1rem;
+	margin: 0;
+}
+.intro p, .intro h1{
+	padding: 0;
+	margin: 0;
+	margin-bottom: .5rem;
+	text-align: center;
+}
 /**********
 Thumbnails
 ***********/
 
-/* grid layout */
 section{
-	display: grid;
-	grid-template-columns: 1fr 3fr;
+	margin: 1rem 3rem;
 }
 #gallery{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	border-left: solid #B84D4D .25rem;
-	margin-left: 2rem
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
 }
 
 /* layout of items of each individual portfolio item */
@@ -388,14 +467,14 @@ Media Queries
 
 
 /* sub nav bar for smaller screens */
-@media screen and (max-width: 500px){
-	.sub{
+@media screen and (max-width: 630px){
+	.filters{
 		display: block;
 		line-height: 3;
 	}
 }
 
-/* main nav bar for smaller screens */
+/* main nav bar for smaller screens AND smaller images*/
 @media screen and (max-width: 400px) {
 	nav {
 		display:block;
@@ -405,12 +484,18 @@ Media Queries
 		line-height: 2.5rem;
 		padding: .75rem;
 	}
+	.content {
+		width: 200px;
+	}
 }
 
 
-/* media query for left boarder on portfolio page */
+/* media query for left boarder on portfolio page AND smaller images*/
 @media screen and (max-width: 335px){
 	.port-items{
 		border: none;
+	}
+	.content {
+		width: 150px;
 	}
 }

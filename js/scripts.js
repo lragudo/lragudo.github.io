@@ -5,8 +5,7 @@ lightGallery(document.getElementById('gallery'), {
 
   // isotope
 const iso = new Isotope( '.filter-container', {
-  itemSelector: '.content'
-});
+  itemSelector: '.content'});
 
 /* 
 - CLICK BUTTON, FILTER CONTENT
