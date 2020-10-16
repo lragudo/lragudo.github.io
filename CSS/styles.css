@@ -182,6 +182,7 @@ portfolio filtered content
   .content img{
 	border-radius: 5%;
 	width: 100%;
+	background: var(--PrimaryPink);
   }
   .filter-container{
 	  margin: 1rem 3rem;
